@@ -245,11 +245,7 @@
         modalContainer.addEventListener('click',function (even){
             even.stopPropagation()
         })
-    </script>
-    <script>
-        
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
+        var myIndex = 0;
 carousel();
 
 function carousel() {
@@ -263,45 +259,7 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 4000);    
 }
-
-
-
-        var header =document.getElementById('header');
-        var mobileMenu =document.getElementById('mobile-menu');
-        var headerHeight=header.clientHeight;
-        mobileMenu.onclick =function (){
-            var isClosed=header.clientHeight===headerHeight;
-                if(isClosed){
-
-                 header.style.height='auto';
-                 }
-                else
-                {
-
-                 header.style.height=null;
-                 }
-
-         }
-         var menuItems=document.querySelectorAll('#nav li a[href*="#"]');
-         for(var i=0;i<menuItems.length;i++){
-             var menuItem=menuItems[i];
-            
-             menuItem.onclick=function(){
-                header.style.height=null;
-             }
-             menuItem.onclick=function()
-                {   
-                    var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
-                   if(isParentMenu){
-                       event.preventDefault();
-                   }
-                    else{
-                   header.style.height=null;
-                     }
-                }
-         }
-         
-            
     </script>
+   
 </body>
 </html>
