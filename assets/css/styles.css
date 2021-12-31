@@ -145,9 +145,20 @@ overflow: hidden;
 
 #slider{
  margin-top: 46px;
-padding-top: 50%;
-background: url('../img/slider/slider1.jpg') top center / cover no-repeat;
 position: relative;
+display:flex;
+height: 100%;
+}
+.slider-item{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex: 1 0 100%;
+}
+.slider-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #slider .text-content{
     position: absolute;

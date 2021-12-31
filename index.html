@@ -40,9 +40,26 @@
            </div>
         </div>
         <div id="slider">
-            <div class="text-content">
-                <h3 class="text-heading">Chicago</h3>
-                <p class="text-description">Thank you, Chicago - A night we won't forget.</p>
+            <div class="slider-item">
+                <img src="./assets/img/slider/slider1.jpg" class="slider-img" alt="">
+                <div class="text-content">
+                    <h3 class="text-heading">Chicago</h3>
+                    <p class="text-description">Thank you, Chicago - A night we won't forget.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./assets/img/slider/ny.jpg" class="slider-img" alt="">
+                <div class="text-content">
+                    <h3 class="text-heading">Chicago</h3>
+                    <p class="text-description">Thank you, Chicago - A night we won't forget.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./assets/img/slider/la.jpg" class="slider-img" alt="">
+                <div class="text-content">
+                    <h3 class="text-heading">Chicago</h3>
+                    <p class="text-description">Thank you, Chicago - A night we won't forget.</p>
+                </div>
             </div>
 
         </div>
@@ -230,6 +247,25 @@
         })
     </script>
     <script>
+        
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slider-item");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+
+
         var header =document.getElementById('header');
         var mobileMenu =document.getElementById('mobile-menu');
         var headerHeight=header.clientHeight;
